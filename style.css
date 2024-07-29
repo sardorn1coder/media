@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+span, a, label {
+    display: inline-block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.big {
+    border: 10px solid red;
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+    grid-template-areas: 
+        'yashil yashil'
+        'kok1 kok2';
+}
+.long, .short {
+    padding: 20px;
+    font-size: 32px;
+}
+.long {
+    grid-area: yashil;
+    background-color: lime;
+}
+.short {
+    background-color: dodgerblue;
+}
+.short1 {
+    grid-area: kok1;
+}
+.short2 {
+    grid-area: kok2;
+}
+
+@media(max-width:1024px){
+    .big {
+        border-color: black;
+        grid-template-areas: 'yashil' 'kok1' 'kok2'; 
+    }
+    .long {
+        background-color: magenta;
+    }
+}
+@media(max-width:710px){
+    .big {
+        border-color: gold;
+    }
+}
+@media(max-width:500px){
+    .big {
+        margin: 10px;
+        border: 5px solid gray;
+        padding: 10px;
+        text-align: center;
+    }
+}
